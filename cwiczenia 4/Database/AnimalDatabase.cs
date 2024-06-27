@@ -2,15 +2,19 @@ using cwiczenia_4.Models;
 
 namespace cwiczenia_4.Database;
 
-public class AnimalDatabase
+public static class AnimalDatabase
 {
-    public List<Animal> Animals { get; set; } = new List<Animal>();
-
-    public AnimalDatabase()
+    public static List<Animal> Animals { get; set; } = new List<Animal>
     {
-        Animals.Add(new Animal());
-        Animals.Add(new Animal());
-        Animals.Add(new Animal());
-        Animals.Add(new Animal());
-    }
+        new Animal
+        {
+            Id = 1, Name = "Foxy", Type = "dog", Weight = 10.0, Colour = "orange"
+        },
+        new Animal
+        {
+            Id = 2, Name = "Void", Type = "cat", Weight = 5.0, Colour = "black"
+        }
+        
+    };
+    
 }

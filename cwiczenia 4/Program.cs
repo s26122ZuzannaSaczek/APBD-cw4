@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
-builder.Services.AddSingleton<AnimalDatabase>();
+//builder.Services.AddSingleton<AnimalDatabase>();
 
 var app = builder.Build();
 
@@ -21,7 +21,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Minimal API
-app.MapAnimalEndpoints();
+//app.MapAnimalEndpoints();
 
 // Controllers
 app.MapControllers();
